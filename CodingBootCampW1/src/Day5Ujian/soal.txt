@@ -1,0 +1,92 @@
+[09:24, 1/15/2021] Pak Joshep Nexsoft: Buat file Karyawan.txt
+
+ID,Nama,GajiPokok
+1,John,4500000 
+2,Peter,5000000
+3,Linda,10000000 
+4,Lucy,7000000
+
+============================================================
+
+Class Worker (Abstract)
+- ID
+- Nama
+- Gaji Pokok
+- Absensi 
+- Jumlah Cuti  
+- Jumlah izin
++Absensi 
++ Izin Urgent (Sakit)
++ Izin Cuti
++ Hitung Absensi
++ Hitung Gaji Pokok (GajiPokok/22) * JmlAbsensi (Abstract)
+
+Class Staff
+- Tunjangan Makan Rp. 220000 (Cuti melebihi 1 hari/bulan TunjMakan dikurangi -> TunjMakan - ((TunjMakan/22) * jmlh izin lebih)
+- Tunjangan Transport Rp. 440000 (Cuti melebihi 1 hari/bulan TunjTransport dikurangi -> TunjTransport - ((TunjTransport/22) * jmlh izin lebih)
+- Total Gaji
++ Hitung Tunjangan Makan
++ Hitung Tunjangan Transport
++ Hitung Total Gaji 
+
+============================================================
+
+C:>java namaProgram Karyawan.txt
+
+============================================================
+
+Login with Regex
+-> Username Email Regex
+-> Password Password Regex
+
+============================================================
+
+MENU
+1. Input Data Karyawan -> Masukan 2 lg Karyawan
+2. Edit Data Karyawan (Nama Karyawan)
+	-> -> Input ID atau Nama Karyawan
+3. Absensi Karyawan
+	-> Input ID atau Nama Karyawan
+4. Izin Karyawan
+    --> input cuti atau izin urgent
+	-> Input ID atau Nama Karyawan
+5. Hitung Total Gaji Karyawan
+	-> Satu Bulan 22 hari (GajiPokok + TunjMakan + TunjTransport)
+	-> Untuk seluruh Karyawan
+6. Tampilkan Laporan per Karyawan
+	-> Input ID atau Nama Karyawan
+	ID :
+	Nama :
+	Absensi :
+	Cuti :
+	Izin :
+	Tanpa Kabar :
+	Total Gaji :
+7. Tampilkan Laporan Seluruh Karyawan + Tulis Data di LaporanKaryawan.txt (MultiThreading with ThreadPool dengan sizePool=5)
+	-> Di Layar
+	ID :
+	Nama :
+	Absensi :
+	Cuti :
+	Izin :
+	Tanpa Kabar :
+	Total Gaji :
+	
+	ID :
+	Nama :
+	Absensi :
+	Cuti :
+	Izin :
+	Tanpa Kabar :
+	Total Gaji :
+	
+	-> Output di File 
+	ID,Nama,JmlAbsensi,JmlCutiTerpakai,JmlTanpaKabar,TotalGaji
+	1,John,21,1,0,XXX
+	2,Peter,19,1,2,XXX
+	3,------
+	4,------
+	5,------
+	6,------
+	
+99. Exit

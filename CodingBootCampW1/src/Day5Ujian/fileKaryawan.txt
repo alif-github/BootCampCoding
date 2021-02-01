@@ -1,0 +1,6 @@
+ID,Nama,GajiPokok
+1,John,4500000
+2,Peter,5000000
+3,Linda,10000000
+4,Lucy,7000000
+5,Udin,8000000
